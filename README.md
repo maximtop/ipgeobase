@@ -1,4 +1,4 @@
-https://github.com/maximtop/ipgeobase/actions/workflows/main.yml/badge.svg
+![ruby](https://github.com/maximtop/ipgeobase/actions/workflows/main.yml/badge.svg)
 
 # Ipgeobase
 
