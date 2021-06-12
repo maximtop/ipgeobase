@@ -20,7 +20,6 @@ module Ipgeobase
     result = res.body if res.is_a?(Net::HTTPSuccess)
     raise "Was unable to get ip data" if result.nil?
 
-    result = HappyMapper.parse(result)
-    Ipgeobase::Ipmeta.new(result.city, result.country, result.country_code, result.lat, result.lon)
+    Ipgeobase::Ipmeta.parse(result)
   end
 end

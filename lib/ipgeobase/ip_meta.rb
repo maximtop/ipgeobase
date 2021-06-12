@@ -3,14 +3,14 @@
 module Ipgeobase
   # IP metadata container
   class Ipmeta
-    attr_reader :city, :country, :country_code, :lat, :lon
+    include HappyMapper
 
-    def initialize(city, country, country_code, lat, lon)
-      @city = city
-      @country = country
-      @country_code = country_code
-      @lat = lat
-      @lon = lon
-    end
+    tag "query"
+
+    element :city, String, tag: "city"
+    element :country, String, tag: "country"
+    element :country_code, String, tag: "countryCode"
+    element :lat, String, tag: "lat"
+    element :lon, String, tag: "lon"
   end
 end
